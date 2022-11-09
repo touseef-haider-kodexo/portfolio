@@ -9,6 +9,7 @@ import Services from "../components/services";
 import Contact from "../components/contact";
 import Footer from "../components/footer";
 import Testimonials from "../components/testimonials";
+import Portfolio from "../components/portfolio";
 
 export default function Home() {
   return (
@@ -26,6 +27,7 @@ export default function Home() {
         <Skills />
         <Resume />
         <Services />
+        <Portfolio />
         <Testimonials />
         <Contact />
       </div>

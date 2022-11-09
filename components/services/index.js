@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import styles from "./services.module.css";
 import ReactImage from "../../public/react.png";
 import HTMLCSS from "../../public/htmlandcss.jpeg";
@@ -21,40 +22,61 @@ const Services = () => {
         sit in iste officiis commodi quidem hic quas.
       </p>
       <div className={styles.development}>
-        <div className={styles.frontPart}>
-          <h3>Front End Development</h3>
-          <div className={styles.backPart}>
-            <Image src={ReactImage} />
-            <Image src={HTMLCSS} />
-            <Image src={JS} />
-            <Image src={NextJsImage} />
+        <div className={styles.card}>
+          <div className={styles.cardInner}>
+            <div className={styles.frontPart}>
+              <h3>Front End Development</h3>
+            </div>
+            <div className={styles.backPart}>
+              <Image src={ReactImage} />
+              <Image src={HTMLCSS} />
+              <Image src={JS} />
+              <Image src={NextJsImage} />
+            </div>
           </div>
         </div>
-        <div className={styles.frontPart}>
-          <h3>Back End Development</h3>
-          <div className={styles.backPart}>
-            <Image src={NodeJsImage} />
-            <Image src={NestJsImage} />
+        <div className={styles.card}>
+          <div className={styles.cardInner}>
+            <div className={styles.frontPart}>
+              <h3>Back End Development</h3>
+            </div>
+            <div className={styles.backPart}>
+              <Image src={NodeJsImage} />
+              <Image src={NestJsImage} />
+            </div>
           </div>
         </div>
-        <div className={styles.frontPart}>
-          <h3>Databases</h3>
-          <div className={styles.backPart}>
-            <Image src={Mongodb} />
+        <div className={styles.card}>
+          <div className={styles.cardInner}>
+            <div className={styles.frontPart}>
+              <h3>Databases</h3>
+            </div>
+            <div className={styles.backPart}>
+              <Image src={Mongodb} />
+            </div>
           </div>
         </div>
-        <div className={styles.frontPart}>
-          <h3>Cloud</h3>
-          <div className={styles.backPart}>
-            <p>AWS</p>
-            <p>Firebase</p>
+
+        <div className={styles.card}>
+          <div className={styles.cardInner}>
+            <div className={styles.frontPart}>
+              <h3>Cloud</h3>
+            </div>
+            <div className={styles.backPart}>
+              <p>AWS</p>
+              <p>Firebase</p>
+            </div>
           </div>
         </div>
-        <div className={styles.frontPart}>
-          <h3>Other</h3>
-          <div className={styles.backPart}>
-            <p>Docker</p>
-            <p>Kubernetes</p>
+        <div className={styles.card}>
+          <div className={styles.cardInner}>
+            <div className={styles.frontPart}>
+              <h3>Other</h3>
+            </div>
+            <div className={styles.backPart}>
+              <p>Docker</p>
+              <p>Kubernetes</p>
+            </div>
           </div>
         </div>
       </div>
