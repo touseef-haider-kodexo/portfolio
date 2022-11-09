@@ -44,51 +44,59 @@
   margin-bottom: 100px;
 }
 
-.frontPart {
-  display: flex;
-  justify-content: center;
-  border-radius: 20px;
-  align-items: center;
-  background-color: #fff;
-  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%),
-    0 9px 28px 8px rgb(0 0 0 / 5%);
-  transition: transform ease 1.2s;
+.card {
   height: 30vh;
-  position: relative !important;
 }
 
-.frontPart h3 {
+.cardInner {
+  position: relative;
+  width: 100%;
+  border-radius: 20px !important;
+
+  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%),
+    0 9px 28px 8px rgb(0 0 0 / 5%);
+  height: 100%;
   text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.card:hover .cardInner {
+  transform: rotateY(180deg);
+}
+
+.frontPart,
+.backPart {
+  position: absolute;
+  width: 100%;
+  border-radius: 20px !important;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.frontPart {
+  background-color: #fff;
   color: #0563bb;
+  display: flex;
+  border-radius: 20px !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .backPart {
-  transform: scale(0);
-  height: 100%;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.frontPart:hover {
-  transform: rotateY(-180deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px !important;
   background-color: azure;
   color: #728394;
-}
-.frontPart:hover h3 {
-  visibility: hidden;
-}
-.frontPart:hover .backPart {
-  display: flex !important;
-  justify-content: center !important;
-  align-items: center !important;
-  transform: rotateY(180deg) !important;
-  position: absolute !important;
-  top: 0 !important;
+  transform: rotateY(180deg);
 }
 
 .backPart > * {
-  margin: 10px !important;
+  margin: 10px;
 }
 
 /* Media Queries */

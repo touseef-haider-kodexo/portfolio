@@ -23,9 +23,9 @@ const Intro = () => {
                 "Freelancer",
                 "Mixed Martial Artist",
               ]}
-              loop={5}
+              loop
               cursor
-              cursorStyle="!"
+              cursorStyle=""
               typeSpeed={70}
               deleteSpeed={50}
               delaySpeed={1000}
